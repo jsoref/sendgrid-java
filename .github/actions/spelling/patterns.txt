@@ -1,0 +1,13 @@
+\.setContent\(".*"\)
+\.setBody\(".*"\);
+\.assertEquals\(.*\);
+(?:SIGNATURE|PUBLIC_KEY|publicKey) = "\S+"
+^\s+"\S+",$
+# GitHub SHAs
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+# uuid:
+[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}
+# URL escaped characters
+\%[0-9A-F]{2}
+[0-9a-f]{32}
+ -D
